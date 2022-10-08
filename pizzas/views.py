@@ -7,7 +7,7 @@ def index(request):
 	return render(request, 'pizzas/index.html')
 
 def pizzas(request):
-	"""Display pizzas available"""
+	"""Display all pizzas available"""
 	pizzas = Pizza.objects.all()
 	context = {'pizzas': pizzas}
 	return render(request, 'pizzas/pizzas.html', context)
